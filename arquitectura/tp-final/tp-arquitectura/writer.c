@@ -31,12 +31,36 @@ void evaluate_expression(Expression e, Bucket *B){
                 evaluate_component(e.v2, B, y);
                 printf("add r1, r%d, r%d\n", x, y);
             }
-            case RESTA: {}
-            case MULTIPLICACION: {}
-            case DIVISION: {}
-            case AND: {}
-            case OR: {}
-            case XOR: {}
+            case RESTA: {
+                evaluate_component(e.v1, B, x);
+                evaluate_component(e.v2, B, y);
+                printf("sub r1, r%d, r%d\n", x, y);
+            }
+            case MULTIPLICACION: {
+                evaluate_component(e.v1, B, x);
+                evaluate_component(e.v2, B, y);
+                printf("mul r1, r%d, r%d\n", x, y);
+            }
+            case DIVISION: {
+                evaluate_component(e.v1, B, x);
+                evaluate_component(e.v2, B, y);
+                printf("div r1, r%d, r%d\n", x, y);
+            }
+            case AND: {
+                evaluate_component(e.v1, B, x);
+                evaluate_component(e.v2, B, y);
+                printf("and r1, r%d, r%d\n", x, y); 
+            }
+            case OR: {
+                evaluate_component(e.v1, B, x);
+                evaluate_component(e.v2, B, y);
+                printf("or r1, r%d, r%d\n", x, y);
+            }
+            case XOR: {
+                evaluate_component(e.v1, B, x);
+                evaluate_component(e.v2, B, y);
+                printf("xor r1, r%d, r%d\n", x, y);
+            }
             case MENOR: {}
             case MENOR_O_IGUAL: {}
             case IGUAL: {}
